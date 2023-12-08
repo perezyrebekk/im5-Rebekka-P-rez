@@ -1,0 +1,292 @@
+/* General Styles */
+header {
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+.title {
+    position: relative;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: white;
+}
+
+.textcontainer {
+    color: white;
+    max-width: 95%;
+    line-height: 140%;
+    font-size: 18px;
+    padding-left: 2%;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2;
+}
+
+hr {
+    width: 100%;
+    color: white;
+}
+
+.to-top {
+    background: rgb(51, 255, 0);
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: rgb(255, 111, 0);
+    text-decoration: none;
+    opacity: 1;
+    transition: all .4s;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.full {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.flexboxcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: auto;
+}
+
+.imageborders35 {
+    margin: 2%;
+    width: 70%;
+    height: auto;
+}
+
+/* Container holding the image and the text */
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    max-width: 100%;
+}
+
+.haupttitel {
+    font-family: "Impact", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: calc(2vw + 1em);
+    line-height: 80%;
+    position: absolute;
+    left: 0.5%;
+    right: 10%;
+    top: 5%;
+    max-width: 100%;
+    line-height: 140%;
+    padding: 0.5%;
+    color: white;
+    text-shadow: -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black, 2px 2px 2px black;
+}
+
+.bildbeschreibung {
+    max-width: 80%;
+    margin: 20px auto;
+    line-height: 150%;
+    font-size: 18px;
+    padding: 10px;
+    font-family: "Times New Roman", serif;
+    font-weight: 400;
+    color: white;
+    font-style: italic;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.credits,
+.backtotop {
+    height: auto;
+    line-height: 140%;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.credits {
+    text-align: left;
+    padding-left: 2%;
+    font-size: 20px;
+    color: white;
+}
+
+.backtotop {
+    text-align: right;
+    font-size: 20px;
+    width: 95%;
+}
+
+footer {
+    padding: 5px 5px;
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+/* Kommentiere Slider-Styles aus
+.slides {
+    padding: 0;
+    width: 800px;
+    height: 420px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide-container {
+    display: block;
+}
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 135%;
+    height: 135%;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    transition: opacity .2s;
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover+.nav label {
+    opacity: 0.5;
+}
+
+.nav label:hover {
+    opacity: 1;
+}
+
+.nav .next {
+    right: 0;
+}
+
+input:checked+.slide-container .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked+.slide-container .nav label {
+    display: block;
+}
+
+.nav-dots {
+    width: 100%;
+    bottom: 9px;
+    height: 11px;
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+
+.nav-dots .nav-dot {
+    top: -5px;
+    width: 11px;
+    height: 11px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+*/
+
+/* Media Queries for responsiveness */
+
+@media only screen and (min-width: 200px) (max-width: 600px) {
+    .haupttitel {
+        font-size: 24px;
+    }
+
+    .bildbeschreibung {
+        font-size: 16px;
+    }
+
+    .credits,
+    .backtotop {
+        font-size: 16px;
+    }
+    .nur-desktop{display:none;}
+    #nur-fuer-mobile{display: none;}
+    #nur-fuer-mobile-2 {display: none;}
+}
+
+#nur-fuer-mobile{display: none;}
+#nur-fuer-mobile-2 {display: none;}
+
+@media only
